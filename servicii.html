@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMag - Servicii</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Tech<span>Mag</span></h1>
+            </div>
+
+            <div><input type="text" class="searchbar-content" placeholder="search..."></div>
+    <div><button type="submit" style=" padding:0 15px 0 15px; height:30px; margin: auto; margin-left: -10px;">Cauta</button></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="despre.html">Despre noi</a></li>
+                    <li><a href="servicii.html" class="active">Servicii</a></li>
+                    <li><a href="contacte.html">Contacte</a></li>
+                    <li><a href="cos.html"><i class="fas fa-shopping-cart"></i> Coș (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="services-hero">
+        <div class="container">
+            <h1>Serviciile noastre</h1>
+            <p>Oferim soluții complete pentru toate nevoile tale tehnologice</p>
+        </div>
+    </section>
+
+    <section class="services-main">
+        <div class="container">
+            <div class="service-categories">
+                <h2>Servicii pentru clienți</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-medical"></i>
+                        </div>
+                        <h3>Diagnosticare și reparații</h3>
+                        <ul>
+                            <li>Diagnosticare gratuită a defecțiunilor</li>
+                            <li>Reparații hardware și software</li>
+                            <li>Înlocuire componente defecte</li>
+                            <li>Curățare profesională</li>
+                        </ul>
+                        <a href="#contact-form" class="btn-service">Programează serviciu</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Asamblare personalizată</h3>
+                        <ul>
+                            <li>Configurare PC după cerințe</li>
+                            <li>Asamblare profesională</li>
+                            <li>Testare extensivă</li>
+                            <li>Instalare sistem de operare</li>
+                        </ul>
+                        <a href="#contact-form" class="btn-service">Configurează acum</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Service și garanție</h3>
+                        <ul>
+                            <li>Service pentru produse achiziționate</li>
+                            <li>Garanție extinsă disponibilă</li>
+                            <li>Înlocuire produse în garanție</li>
+                            <li>Asistență tehnică</li>
+                        </ul>
+                        <a href="#contact-form" class="btn-service">Solicită service</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Instalare și configurare</h3>
+                        <ul>
+                            <li>Instalare software necesar</li>
+                            <li>Configurare rețea acasă/birou</li>
+                            <li>Migrare date</li>
+                            <li>Configurare periferice</li>
+                        </ul>
+                        <a href="#contact-form" class="btn-service">Află detalii</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Instruire și training</h3>
+                        <ul>
+                            <li>Training personalizat</li>
+                            <li>Învățare utilizare hardware</li>
+                            <li>Workshop-uri software</li>
+                            <li>Asistență remote</li>
+                        </ul>
+                        <a href="#contact-form" class="btn-service">Înscrie-te</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-business-time"></i>
+                        </div>
+                        <h3>Soluții pentru afaceri</h3>
+                        <ul>
+                            <li>Echipare IT pentru companii</li>
+                            <li>Configurare rețea corporativă</li>
+                            <li>Servicii de mentenanță</li>
+                            <li>Contracte de service</li>
+                        </ul>
+                        <a href="#contact-form" class="btn-service">Contactează-ne</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-process">
+                <h2>Cum funcționează procesul de service?</h2>
+                <div>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Programare</h3>
+                        <p>Contactați-ne telefonic sau online pentru a programa o vizită sau a trimite echipamentul</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Diagnosticare</h3>
+                        <p>Echipamentul dumneavoastră este testat pentru a identifica problema</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Estimare cost</h3>
+                        <p>Vi se comunică costul reparației și se așteaptă aprobarea</p>
+                    </div>
+                </div>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Reparare</h3>
+                        <p>Echipamentul este reparat de specialiștii noștri</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <h3>Testare</h3>
+                        <p>Echipamentul este testat pentru a verifica funcționalitatea</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">6</div>
+                        <h3>Predare</h3>
+                        <p>Echipamentul reparat vă este returnat</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="service-pricing">
+                <h2>Tarife servicii</h2>
+                <div class="pricing-tables">
+                    <div class="pricing-card">
+                        <h3>Basic</h3>
+                        <div class="price">150 lei<span>/intervenție</span></div>
+                        <ul>
+                            <li>Diagnosticare gratuită</li>
+                            <li>Curățare interior calculator</li>
+                            <li>Instalare sistem de operare</li>
+                            <li>Configurare de bază</li>
+                            <li>Suport telefonic 24/7</li>
+                        </ul>
+                        <a href="#contact-form" class="btn-pricing">Alege</a>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="featured-badge">Recomandat</div>
+                        <h3>Standard</h3>
+                        <div class="price">250 lei<span>/intervenție</span></div>
+                        <ul>
+                            <li>Toate serviciile din pachetul Basic</li>
+                            <li>Instalare software necesar</li>
+                            <li>Migrare date</li>
+                            <li>Configurare rețea</li>
+                            <li>Asistență remote</li>
+                        </ul>
+                        <a href="#contact-form" class="btn-pricing">Alege</a>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Premium</h3>
+                        <div class="price">400 lei<span>/intervenție</span></div>
+                        <ul>
+                            <li>Toate serviciile din pachetul Standard</li>
+                            <li>Instalare hardware</li>
+                            <li>Configurare avansată</li>
+                            <li>Training personalizat</li>
+                            <li>Vizită la domiciliu</li>
+                        </ul>
+                        <a href="#contact-form" class="btn-pricing">Alege</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-contact" id="contact-form">
+                <h2>Programează un serviciu</h2>
+                <form class="service-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nume complet*</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Telefon*</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Serviciu solicitat*</label>
+                            <select id="service" required>
+                                <option value="">Selectează un serviciu</option>
+                                <option value="reparatie">Reparații</option>
+                                <option value="asamblare">Asamblare PC</option>
+                                <option value="configurare">Configurare</option>
+                                <option value="training">Training</option>
+                                <option value="service">Service în garanție</option>
+                                <option value="altul">Alt serviciu</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Descrie problema sau cerința ta*</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="file">Încarcă fișiere relevante (opțional)</label>
+                        <input type="file" id="file">
+                    </div>
+                    <button type="submit" class="btn-submit">Trimite cererea</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-faq">
+        <div class="container">
+            <h2>Întrebări frecvente</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Cât durează în medie o reparație?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Timpul de reparație variază în funcție de complexitatea problemei. Majoritatea reparațiilor simple se finalizează în 1-2 zile lucrătoare. Pentru probleme complexe sau care necesită piese de schimb, durata poate fi de până la 5 zile lucrătoare.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Oferiți garanție pentru serviciile de reparație?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Da, toate reparațiile beneficiază de garanție 6 luni. Dacă problema reapare în această perioadă din același motiv, reparația se efectuează gratuit.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Pot programa o vizită la domiciliu?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Da, oferim servicii la domiciliu în București și împrejurimi pentru un cost suplimentar de 100 lei. Pentru alte localități, costul se stabilește în funcție de distanță.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Ce componente pot aduce pentru asamblare PC?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Puteți aduce orice componente achiziționate de la noi sau de la alți furnizori. Înainte de achiziție, vă recomandăm să ne consultați pentru compatibilitatea componentelor.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Cum pot urmări stadiul reparației?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>La primirea echipamentului, vi se va comunica un număr de ticket pe care îl puteți folosi pentru a verifica stadiul online sau prin apel telefonic la suportul nostru.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>TechMag</h3>
+                <p>Cel mai bun magazin de calculatoare din România</p>
+            </div>
+            <div class="footer-section">
+                <h3>Linkuri rapide</h3>
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="contacte.html">Contacte</a></li>
+                    <li><a href="plati.html">Metode de plată</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacte</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Strada Calculatorului 15, București</p>
+                <p><i class="fas fa-phone"></i> +373 22 443 443 </p>
+                <p><i class="fas fa-envelope"></i> contact@techmag.ro</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 TechMag. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+        // Script pentru FAQ
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                question.classList.toggle('active');
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+
+        // Script pentru formular
+        const serviceForm = document.querySelector('.service-form');
+        if (serviceForm) {
+            serviceForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Cererea dumneavoastră a fost trimisă cu succes! Vă vom contacta în cel mai scurt timp.');
+                this.reset();
+            });
+        }
+    </script>
+</body>
+</html>

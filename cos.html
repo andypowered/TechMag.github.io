@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMag - Coș de cumpărături</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Tech<span>Mag</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="despre.html">Despre noi</a></li>
+                    <li><a href="servicii.html">Servicii</a></li>
+                    <li><a href="contacte.html">Contacte</a></li>
+                    <li><a href="cos.html" class="active"><i class="fas fa-shopping-cart"></i> Coș (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="shopping-cart">
+        <div class="container">
+            <h2>Coșul tău de cumpărături</h2>
+            <div class="cart-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produs</th>
+                            <th>Preț</th>
+                            <th>Cantitate</th>
+                            <th>Total</th>
+                            <th>Acțiuni</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items-list">
+                        <!-- Elementele coșului vor fi încărcate din JavaScript -->
+                    </tbody>
+                </table>
+                <div class="cart-summary">
+                    <h3>Sumar comandă</h3>
+                    <div class="summary-details">
+                        <p>Subtotal: <span id="subtotal">0</span> lei</p>
+                        <p>Transport: <span id="shipping">0</span> lei</p>
+                        <p class="total">Total: <span id="total">0</span> lei</p>
+                    </div>
+                    <a href="plati.html" class="btn-checkout">Finalizează comanda</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>TechMag</h3>
+                <p>Cel mai bun magazin de calculatoare din România</p>
+            </div>
+            <div class="footer-section">
+                <h3>Linkuri rapide</h3>
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="contacte.html">Contacte</a></li>
+                    <li><a href="plati.html">Metode de plată</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacte</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Strada Puskina, Chisinau</p>
+                <p><i class="fas fa-phone"></i> +373 22 433 433</p>
+                <p><i class="fas fa-envelope"></i> contact@techmag.ro</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 TechMag. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+вы
+    <script src="js/script.js"></script>
+</body>
+</html>

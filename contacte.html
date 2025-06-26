@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMag - Contacte</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Tech<span>Mag</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="despre.html">Despre noi</a></li>
+                    <li><a href="servicii.html">Servicii</a></li>
+                    <li><a href="contacte.html" class="active">Contacte</a></li>
+                    <li><a href="cos.html"><i class="fas fa-shopping-cart"></i> Coș (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Contactează-ne</h1>
+            <p>Suntem mereu aici pentru a-ți răspunde la întrebări și a-ți oferi asistență</p>
+        </div>
+    </section>
+
+    <section class="contact-main">
+        <div class="container">
+            <div class="contact-grid">
+               
+
+                <div class="contact-form">
+                    <h2>Trimite-ne un mesaj</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Nume complet*</label>
+                            <input type="text" id="contactName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Adresa de email*</label>
+                            <input type="email" id="contactEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Număr de telefon</label>
+                            <input type="tel" id="contactPhone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subiect*</label>
+                            <select id="contactSubject" name="subject" required>
+                                <option value="">Selectează un subiect</option>
+                                <option value="intrebare">Întrebare despre produse</option>
+                                <option value="comanda">Stare comandă</option>
+                                <option value="service">Service și reparații</option>
+                                <option value="garantie">Probleme garanție</option>
+                                <option value="alte">Alte întrebări</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Mesajul tău*</label>
+                            <textarea id="contactMessage" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Trimite mesaj</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="contact-map">
+                <h2>Ne găsești aici</h2>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.693027082471!2d28.82821531557449!3d47.0223968791545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97c3626b15555%3A0x5c4e8e9b5a3d3b1a!2sStrada%20Pu%C5%9Fkin%203%2C%20Chi%C5%9Fin%C4%83u%2C%20Moldova!5e0!3m2!1sen!2sro!4v1620000000000!5m2!1sen!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="contact-departments">
+                <h2>Departamentele noastre</h2>
+                <div class="departments-grid">
+                    <div class="department-card">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>Vânzări</h3>
+                        <p>Pentru întrebări despre produse, comenzi și livrări</p>
+                        <p><strong>Email:</strong> <a href="mailto:vanzari@techmag.md">vanzari@techmag.md</a></p>
+                        <p><strong>Telefon:</strong> <a href="tel:+0">022 445 447</a></p>
+                    </div>
+                    <div class="department-card">
+                        <i class="fas fa-tools"></i>
+                        <h3>Service</h3>
+                        <p>Pentru probleme tehnice și reparații</p>
+                        <p><strong>Email:</strong> <a href="mailto:service@techmag.md">service@techmag.md</a></p>
+                        <p><strong>Telefon:</strong> <a href="tel:+0">022 445 447</a></p>
+                    </div>
+                    <div class="department-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Garanții</h3>
+                        <p>Pentru probleme legate de garanții și returnări</p>
+                        <p><strong>Email:</strong> <a href="mailto:garantii@techmag.md">garantii@techmag.md</a></p>
+                        <p><strong>Telefon:</strong> <a href="tel:+0">022 445 446</a></p>
+                    </div>
+                    <div class="department-card">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Parteneriate</h3>
+                        <p>Pentru colaborări și parteneriate de afaceri</p>
+                        <p><strong>Email:</strong> <a href="mailto:part@techmag.md">part@techmag.md</a></p>
+                        <p><strong>Telefon:</strong> <a href="tel:+0">022 445 445</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>TechMag</h3>
+                <p>Cel mai bun magazin de calculatoare din România</p>
+            </div>
+            <div class="footer-section">
+                <h3>Linkuri rapide</h3>
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="contacte.html">Contacte</a></li>
+                    <li><a href="plati.html">Metode de plată</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacte</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Strada Puskina, Chisinau</p>
+                <p><i class="fas fa-phone"></i> +373 22 433 433</p>
+                <p><i class="fas fa-envelope"></i> contact@techmag.ro</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 TechMag. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+
+            alert('Mesajul tău a fost trimis cu succes! Vă vom contacta în cel mai scurt timp posibil.');
+            
+            this.reset();
+        });
+
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const count = cart.reduce((total, item) => total + item.quantity, 0);
+            document.querySelectorAll('#cart-count').forEach(el => {
+                el.textContent = count;
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+        });
+    </script>
+</body>
+</html>

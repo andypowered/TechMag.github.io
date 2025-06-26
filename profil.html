@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMag - Profilul meu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Tech<span>Mag</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="profil.html" class="active">Profil</a></li>
+                    <li><a href="despre.html">Despre noi</a></li>
+                    <li><a href="servicii.html">Servicii</a></li>
+                    <li><a href="contacte.html">Contacte</a></li>
+                    <li><a href="cos.html"><i class="fas fa-shopping-cart"></i> Coș (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="profile">
+        <div class="container">
+            <h2>Profilul meu</h2>
+            <div class="profile-content">
+                <div class="profile-info">
+                    <div class="avatar">
+                        <div></div><img style="height:150px; width:150px;"
+                        src="avatar.jpg" alt="Avatar utilizator"></div> 
+                       <div><button class="btn-change-avatar">Schimbă avatarul</button></div> 
+                    </div>
+                    <div class="details">
+                        <h3>Informații personale</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Nume complet:</label>
+                                <input type="text" id="name" value="Davidenco Artem">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" value="artemdavidenco@techmag.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon:</label>
+                                <input type="tel" id="phone" value="+373 79 888 888 ">
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Adresă:</label>
+                                <textarea id="address">Strada Mihai Eminescu , Chisinau</textarea>
+                            </div>
+                            <button type="submit" class="btn">Salvează modificările</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="profile-orders">
+                    <h3>Comenzile mele</h3>
+                    <div class="orders-list">
+                        <div class="order">
+                            <div class="order-header">
+                                <span class="order-id">#12345</span>
+                                <span class="order-date">15.06.2023</span>
+                                <span class="order-status">Finalizată</span>
+                                <span class="order-total">2.499 lei</span>
+                            </div>
+                            <div class="order-products">
+                                <p>1 x Calculator Birou B-200</p>
+                            </div>
+                        </div>
+                        <div class="order">
+                            <div class="order-header">
+                                <span class="order-id">#12344</span>
+                                <span class="order-date">10.05.2023</span>
+                                <span class="order-status">Finalizată</span>
+                                <span class="order-total">3.799 lei</span>
+                            </div>
+                            <div class="order-products">
+                                <p>1 x Laptop Ultra SLIM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>TechMag</h3>
+                <p>Cel mai bun magazin de calculatoare din România</p>
+            </div>
+            <div class="footer-section">
+                <h3>Linkuri rapide</h3>
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="contacte.html">Contacte</a></li>
+                    <li><a href="plati.html">Metode de plată</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacte</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Strada Puskina, Chisinau</p>
+                <p><i class="fas fa-phone"></i> +373 22 433 433</p>
+                <p><i class="fas fa-envelope"></i> contact@techmag.ro</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 TechMag. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

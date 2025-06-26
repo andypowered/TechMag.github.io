@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMag - Metode de plată</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Tech<span>Mag</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="despre.html">Despre noi</a></li>
+                    <li><a href="servicii.html">Servicii</a></li>
+                    <li><a href="contacte.html">Contacte</a></li>
+                    <li><a href="cos.html"><i class="fas fa-shopping-cart"></i> Coș (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="payment-section">
+        <div class="container">
+            <div class="payment-steps">
+                <div class="step completed">
+                    <div class="step-number">1</div>
+                    <div class="step-info">
+                        <h3>Coș de cumpărături</h3>
+                        <p>Verifică produsele</p>
+                    </div>
+                </div>
+                <div class="step active">
+                    <div class="step-number">2</div>
+                    <div class="step-info">
+                        <h3>Metodă de plată</h3>
+                        <p>Alege modalitatea de plată</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-info">
+                        <h3>Confirmare</h3>
+                        <p>Finalizează comanda</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-content">
+                <div class="payment-methods">
+                    <h2>Alege metoda de plată</h2>
+                    <div class="methods-grid">
+                        <div class="method-card active" data-method="card">
+                            <i class="fas fa-credit-card"></i>
+                            <h3>Card bancar</h3>
+                            <p>Plătește cu cardul tău de credit/debit</p>
+                        </div>
+                        <div class="method-card" data-method="transfer">
+                            <i class="fas fa-university"></i>
+                            <h3>Transfer bancar</h3>
+                            <p>Plătește prin transfer bancar</p>
+                        </div>
+                        <div class="method-card" data-method="cash">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <h3>Ramburs la livrare</h3>
+                            <p>Plătește cash la primirea coletului</p>
+                        </div>
+                        <div class="method-card" data-method="paypal">
+                            <i class="fab fa-paypal"></i>
+                            <h3>PayPal</h3>
+                            <p>Plătește prin contul tău PayPal</p>
+                        </div>
+                    </div>
+
+                    <div class="payment-form" id="card-form">
+                        <h3>Detalii card bancar</h3>
+                        <form id="cardPaymentForm">
+                            <div class="form-group">
+                                <label for="cardNumber">Număr card*</label>
+                                <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cardExpiry">Data expirării*</label>
+                                    <input type="text" id="cardExpiry" placeholder="MM/AA" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cardCvv">CVV*</label>
+                                    <input type="text" id="cardCvv" placeholder="123" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="cardName">Numele de pe card*</label>
+                                <input type="text" id="cardName" placeholder="Ion Popescu" required>
+                            </div>
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="saveCard">
+                                <label for="saveCard">Salvează acest card pentru plăți viitoare</label>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="payment-form hidden" id="transfer-form">
+                        <h3>Detalii transfer bancar</h3>
+                        <div class="bank-info">
+                            <p>Pentru a finaliza comanda, te rugăm să faci transferul către:</p>
+                            <div class="bank-details">
+                                <p><strong>Beneficiar:</strong> TechMag SRL</p>
+                                <p><strong>IBAN:</strong> RO12 BTRL 0123 4567 8910 1112</p>
+                                <p><strong>Banca:</strong> Banca Transilvania</p>
+                                <p><strong>Suma:</strong> <span id="transfer-amount">0</span> lei</p>
+                                <p><strong>Referință:</strong> COM-<span id="transfer-reference">123456</span></p>
+                            </div>
+                            <p class="notice">Comanda va fi procesată după ce primim confirmarea plății. Transferul poate dura până la 24 de ore în zilele lucrătoare.</p>
+                        </div>
+                    </div>
+
+                    <div class="payment-form hidden" id="cash-form">
+                        <h3>Ramburs la livrare</h3>
+                        <div class="cash-info">
+                            <p>Veți plăti comanda la primirea coletului. Livrarea se face prin curier rapid.</p>
+                            <div class="cash-details">
+                                <p><i class="fas fa-info-circle"></i> Taxa de ramburs este de 10 lei.</p>
+                                <p><i class="fas fa-clock"></i> Livrarea se face în 1-3 zile lucrătoare.</p>
+                                <p><i class="fas fa-money-bill-wave"></i> Puteți plăti cash sau cu POS-ul curierului.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-form hidden" id="paypal-form">
+                        <h3>Plată prin PayPal</h3>
+                        <div class="paypal-info">
+                            <p>Veți fi redirecționat către site-ul PayPal pentru a finaliza plata.</p>
+                            <button class="btn-paypal">
+                                <i class="fab fa-paypal"></i> Plătește cu PayPal
+                            </button>
+                            <p class="notice">După finalizarea plății, veți fi întors înapoi pe site-ul nostru pentru confirmarea comenzii.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <h2>Sumar comandă</h2>
+                    <div class="summary-content">
+                        <div class="summary-items">
+                            <h3>Produse</h3>
+                            <div id="payment-items">
+                                <!-- Items will be loaded from JavaScript -->
+                            </div>
+                        </div>
+                        <div class="summary-totals">
+                            <h3>Total</h3>
+                            <div class="totals-row">
+                                <p>Subtotal:</p>
+                                <p><span id="payment-subtotal">0</span> lei</p>
+                            </div>
+                            <div class="totals-row">
+                                <p>Transport:</p>
+                                <p><span id="payment-shipping">0</span> lei</p>
+                            </div>
+                            <div class="totals-row discount">
+                                <p>Reducere:</p>
+                                <p>-<span id="payment-discount">0</span> lei</p>
+                            </div>
+                            <div class="totals-row total">
+                                <p>Total de plată:</p>
+                                <p><span id="payment-total">0</span> lei</p>
+                            </div>
+                        </div>
+                        <div class="summary-actions">
+                            <a href="cos.html" class="btn-back">Înapoi la coș</a>
+                            <button class="btn-confirm">Confirmă comanda</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>TechMag</h3>
+                <p>Cel mai bun magazin de calculatoare din România</p>
+            </div>
+            <div class="footer-section">
+                <h3>Linkuri rapide</h3>
+                <ul>
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="contacte.html">Contacte</a></li>
+                    <li><a href="plati.html">Metode de plată</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacte</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Strada Puskina, Chisinau</p>
+                <p><i class="fas fa-phone"></i> +373 22 433 433</p>
+                <p><i class="fas fa-envelope"></i> contact@techmag.ro</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 TechMag. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load cart from localStorage
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // Update cart count
+            function updateCartCount() {
+                const count = cart.reduce((total, item) => total + item.quantity, 0);
+                document.getElementById('cart-count').textContent = count;
+            }
+            
+            // Calculate order totals
+            function calculateTotals() {
+                let subtotal = 0;
+                
+                // Calculate subtotal
+                cart.forEach(item => {
+                    subtotal += item.price * item.quantity;
+                });
+                
+                // Calculate shipping (free over 1000 lei)
+                const shipping = subtotal >= 1000 ? 0 : 50;
+                const total = subtotal + shipping;
+                
+                // Update UI
+                document.getElementById('payment-subtotal').textContent = subtotal.toFixed(2);
+                document.getElementById('payment-shipping').textContent = shipping.toFixed(2);
+                document.getElementById('payment-total').textContent = total.toFixed(2);
+                
+                // Update transfer amount and reference
+                document.getElementById('transfer-amount').textContent = total.toFixed(2);
+                document.getElementById('transfer-reference').textContent = Math.floor(100000 + Math.random() * 900000);
+                
+                return total;
+            }
+            
+            // Display cart items
+            function displayCartItems() {
+                const itemsContainer = document.getElementById('payment-items');
+                itemsContainer.innerHTML = '';
+                
+                if (cart.length === 0) {
+                    itemsContainer.innerHTML = '<p>Nu există produse în coș</p>';
+                    return;
+                }
+                
+                cart.forEach(item => {
+                    const itemElement = document.createElement('div');
+                    itemElement.className = 'summary-item';
+                    itemElement.innerHTML = `
+                        <p>${item.name} × ${item.quantity}</p>
+                        <p>${(item.price * item.quantity).toFixed(2)} lei</p>
+                    `;
+                    itemsContainer.appendChild(itemElement);
+                });
+            }
+            
+            // Payment method selection
+            const methodCards = document.querySelectorAll('.method-card');
+            const paymentForms = document.querySelectorAll('.payment-form');
+            
+            methodCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // Remove active class from all cards
+                    methodCards.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked card
+                    this.classList.add('active');
+                    
+                    // Get selected method
+                    const method = this.getAttribute('data-method');
+                    
+                    // Hide all forms
+                    paymentForms.forEach(form => form.classList.add('hidden'));
+                    
+                    // Show selected form
+                    document.getElementById(`${method}-form`).classList.remove('hidden');
+                });
+            });
+            
+            // Form submission
+            const confirmButton = document.querySelector('.btn-confirm');
+            if (confirmButton) {
+                confirmButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get selected payment method
+                    const selectedMethod = document.querySelector('.method-card.active').getAttribute('data-method');
+                    
+                    // Validate form based on selected method
+                    let isValid = true;
+                    
+                    if (selectedMethod === 'card') {
+                        const cardNumber = document.getElementById('cardNumber').value;
+                        const cardExpiry = document.getElementById('cardExpiry').value;
+                        const cardCvv = document.getElementById('cardCvv').value;
+                        const cardName = document.getElementById('cardName').value;
+                        
+                        if (!cardNumber || !cardExpiry || !cardCvv || !cardName) {
+                            isValid = false;
+                            alert('Te rugăm să completezi toate câmpurile pentru cardul bancar.');
+                        }
+                    }
+                    
+                    if (isValid) {
+                        // In a real app, you would process the payment here
+                        alert(`Comanda ta a fost plasată cu succes! Metoda de plată: ${selectedMethod}. Vei primi un email de confirmare.`);
+                        
+                        // Clear cart
+                        localStorage.removeItem('cart');
+                        
+                        // Redirect to confirmation page (which you would create)
+                        // window.location.href = 'confirmare.html';
+                    }
+                });
+            }
+            
+            // Initialize
+            updateCartCount();
+            displayCartItems();
+            calculateTotals();
+        });
+    </script>
+</body>
+</html>
