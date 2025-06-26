@@ -6,9 +6,8 @@
    ```bash
    git clone https://github.com/andypowered/TechMag.github.io.git
    ```
-   или перейдите по ссылке : 
-# TechMag.github.io
-
+   или перейдите по ссылке :
+   ### https://andypowered.github.io/TechMag.github.io/
 # Учебный проект сайта
 
 Простой статический веб-сайт, созданный в рамках практического задания по дисциплине "Web Design" в CIAB.
